@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;900&display=swap');
+
+body {
+    background: rgb(255,241,0);
+background: radial-gradient(circle, rgba(255,241,0,1) 0%, rgba(255,211,0,1) 100%);
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.seleccion {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #17a2b8;
+}
+
+.contenedor {
+    display:grid;
+    padding:0px 100px 0px 100px;
+}
+
+.carta {
+    margin:20px;
+    height:176px;
+    width:277px;
+    -webkit-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.47);
+    -moz-box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.47);
+    box-shadow: 0px 0px 14px -4px rgba(0,0,0,0.47);
+    border-radius: 45px;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.carta img{
+    margin-left:-15px;
+    margin-top:-9px;
+    width:112%;
+    height:112%;
+}
