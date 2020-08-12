@@ -40,6 +40,7 @@ for (var i = 0 ; i < 14; i++) {
             /* Posiciones por Numero aleatorio */
             lista.push(k);
             lista = lista.sort(function() {return Math.random() - 0.5});
+
         }
         /* aleatorio */
         let imagenes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13]
@@ -55,19 +56,21 @@ for (var i = 0 ; i < 14; i++) {
         for(h=0;h<valor*2;h++) {
             objetos.push({'tarjeta':arrayImg[h],'posicion':lista[h],'activo':true});
         }
-        console.log(objetos);
-
         /* Cambiar imagen de cartas */   
         padre.addEventListener('click',(e)=>{
-            var nroTarjeta = e.target.innerHTML;
-            e.target.innerHTML=objetos[objetos[nroTarjeta].posicion].tarjeta;
-            /*para ocultar*/
-            /*AYUDA!!!!*/
-            /*No he logrado que la carta se oculte o se elimine despuesde aparecer*/
-            /*El error que me sale es que el e.target.innerHTML una vez clickeado cambia a formato imagen y yo he creado un atributo activo para comparar pero no he logrado hacerlo*/
-            /*AYUDA!!!!*/
-            
-            /* e.target.style.visibility = 'hidden'; */
+            /* Para ocultar tarjetas */ 
+            if(e.target.parentNode.nodeName=='BUTTON') {
+                  e.target.style.visibility = 'hidden';
+            } else {
+                /* Para crear tarjetas */ 
+                const cadena= e.target.innerHTML;
+                var fstChar = cadena.charAt(0);
+                var secChar = cadena.charAt(1);
+                if (!isNaN(secChar)) {
+                    fstChar = cadena.charAt(0)+cadena.charAt(1);
+                }
+                e.target.innerHTML=fstChar+objetos[objetos[fstChar].posicion].tarjeta;
+            }  
         })
 
     },false)}

@@ -2,7 +2,7 @@
 
 body {
     background: rgb(255,241,0);
-background: radial-gradient(circle, rgba(255,241,0,1) 0%, rgba(255,211,0,1) 100%);
+    background: radial-gradient(circle, rgba(255,241,0,1) 0%, rgba(255,211,0,1) 100%);
     font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -31,11 +31,13 @@ h1 {
     border-radius: 45px;
     font-size: xx-large;
     font-weight: 900;
+    display:flex;
+    align-items:center;
 }
 
 .carta img{
+    width:20%;
+    z-index: 5;
     margin-left:-15px;
-    margin-top:-9px;
-    width:112%;
-    height:112%;
+    position:absolute;
 }
